@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/li"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#BEE5D3"
@@ -9,7 +10,7 @@
     tools:context=".SecondActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/whatssap"
         android:layout_width="202dp"
         android:layout_height="73dp"
         android:layout_marginTop="76dp"
@@ -21,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/linkedin" />
 
     <TextView
         android:id="@+id/aboutMeButton"
@@ -39,11 +40,11 @@
         tools:background="#8B5E83" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/linkedin"
         android:layout_width="202dp"
         android:layout_height="73dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="28dp"
         android:background="#D6B0B1"
         android:gravity="center"
         android:text="LinkedIn"
@@ -56,7 +57,7 @@
         android:layout_width="128dp"
         android:layout_height="106dp"
         android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/linkedin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/aboutMeButton"
         app:srcCompat="@drawable/linkedin__1_" />
@@ -79,12 +80,12 @@
         android:gravity="center"
         android:hint="New Message"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/correo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/correo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="60dp"
