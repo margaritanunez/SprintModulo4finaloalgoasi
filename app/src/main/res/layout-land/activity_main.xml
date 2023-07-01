@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/otro_adobe_express"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/experiencia"
@@ -27,11 +27,28 @@
         android:id="@+id/motivacion"
         android:layout_width="0dp"
         android:layout_height="100dp"
+        android:layout_marginBottom="4dp"
         android:background="#BAFFFFFF"
         android:gravity="center"
         android:text="Nivel de motivación: alta"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/infoDeContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#D3FFFFFF"
+        android:text="Información de Contacto"
+        android:textColor="#DF000000"
+        app:layout_constraintBottom_toTopOf="@+id/experiencia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

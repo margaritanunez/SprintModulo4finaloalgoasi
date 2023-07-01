@@ -34,7 +34,7 @@ public class SecondActivity extends AppCompatActivity {
         binding.whatssap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent whatsappIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.whatsapp.com"));
+                Intent whatsappIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:+99999999"));
                 startActivity(whatsappIntent);
 
             }
@@ -42,8 +42,16 @@ public class SecondActivity extends AppCompatActivity {
         binding.correo.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent correoIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.gmail.com/"));
-                startActivity(correoIntent);
+                String[] destinatarios = {"correo@correotest.cl"};
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+
+                emailIntent.setType("text/plain");
+                emailIntent.setData(Uri.parse("mailto:"));
+                emailIntent.putExtra(Intent.EXTRA_EMAIL,destinatarios);
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Asunto del correo");
+                emailIntent.putExtra(Intent.EXTRA_TEXT, binding.txtMensaje.getText());
+
+                startActivity(Intent.createChooser(emailIntent, "Enviando..."));
             }
         });
     }
